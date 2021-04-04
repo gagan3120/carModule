@@ -9,6 +9,6 @@ public class ModelAddException extends RuntimeException {
 
 	public ModelAddException(String message) {
 		super(message);
-	
+
 	}
 }

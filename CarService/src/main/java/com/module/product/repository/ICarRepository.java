@@ -10,10 +10,12 @@ import org.springframework.stereotype.Repository;
 import com.module.product.model.Car;
 
 @Repository
-public interface ICarRepository extends JpaRepository<Car, Long>{
+public interface ICarRepository extends JpaRepository<Car, Long> {
 
 	List<Car> findAll();
+
 	List<Car> findByModel(String model);
+
 	List<Car> findByBrand(String brand);
-	
+
 }

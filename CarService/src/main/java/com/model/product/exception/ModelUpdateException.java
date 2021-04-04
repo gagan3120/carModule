@@ -1,6 +1,6 @@
 package com.model.product.exception;
 
-public class ModelUpdateException extends RuntimeException{
+public class ModelUpdateException extends RuntimeException {
 
 	/**
 	 * 
@@ -9,6 +9,6 @@ public class ModelUpdateException extends RuntimeException{
 
 	public ModelUpdateException(String message) {
 		super(message);
-		
+
 	}
 }

@@ -9,8 +9,7 @@ public class ModelEmptyListException extends RuntimeException {
 
 	public ModelEmptyListException(String message) {
 		super(message);
-		
-	}
 
+	}
 
 }

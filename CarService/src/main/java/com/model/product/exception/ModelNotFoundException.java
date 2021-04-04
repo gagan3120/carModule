@@ -1,6 +1,6 @@
 package com.model.product.exception;
 
-public class ModelNotFoundException extends RuntimeException{
+public class ModelNotFoundException extends RuntimeException {
 
 	/**
 	 * 
@@ -9,7 +9,6 @@ public class ModelNotFoundException extends RuntimeException{
 
 	public ModelNotFoundException(String message) {
 		super(message);
-		
-	}
-	}
 
+	}
+}

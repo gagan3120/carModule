@@ -10,10 +10,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-
-
 @Entity
-@Table(name="car")
+@Table(name = "car")
 public class Car {
 	@Id
 	private long carId;
@@ -28,19 +26,17 @@ public class Car {
 	private LocalDate registrationYear;
 	@Column(name = "registrationstate")
 	private String registrationState;
-	
 
 //	@ManyToOne(cascade = CascadeType.ALL)
 //    @JoinColumn(name = "cid", referencedColumnName = "userId")
 //	  private Customer customer;
-	
-	
-	
-	
+
 	public Car() {
 		super();
 	}
-	public Car(long carId, String brand, String model, String variant, LocalDate registrationYear, String registrationState) {
+
+	public Car(long carId, String brand, String model, String variant, LocalDate registrationYear,
+			String registrationState) {
 		super();
 		this.carId = carId;
 		this.brand = brand;
@@ -49,39 +45,51 @@ public class Car {
 		this.registrationYear = registrationYear;
 		this.registrationState = registrationState;
 	}
+
 	public long getCarId() {
 		return carId;
 	}
+
 	public void setCarId(long carId) {
 		this.carId = carId;
 	}
+
 	public String getBrand() {
 		return brand;
 	}
+
 	public void setBrand(String brand) {
 		this.brand = brand;
 	}
+
 	public String getModel() {
 		return model;
 	}
+
 	public void setModel(String model) {
 		this.model = model;
 	}
+
 	public String getVariant() {
 		return variant;
 	}
+
 	public void setVariant(String variant) {
 		this.variant = variant;
 	}
+
 	public LocalDate getRegistrationYear() {
 		return registrationYear;
 	}
+
 	public void setRegistrationYear(LocalDate registrationYear) {
 		this.registrationYear = registrationYear;
 	}
+
 	public String getRegistrationState() {
 		return registrationState;
 	}
+
 	public void setRegistrationState(String registrationState) {
 		this.registrationState = registrationState;
 	}

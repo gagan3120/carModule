@@ -16,15 +16,15 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class SwaggerConfig {
 	@Bean
 	public Docket api() {
-		
+
 		// Register the controllers to swagger
 		// Also it is configuring the Swagger Docket
 		return new Docket(DocumentationType.SWAGGER_2).select()
-			
+
 				.apis(Predicates.not(RequestHandlerSelectors.basePackage("org.springframework.boot")))
-			
+
 				.build();
-	
+
 	}
 
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
