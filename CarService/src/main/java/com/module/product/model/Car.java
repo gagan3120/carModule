@@ -31,10 +31,22 @@ public class Car {
 //    @JoinColumn(name = "cid", referencedColumnName = "userId")
 //	  private Customer customer;
 
+	/************************************************************************************
+	 * Method:                          Car
+     *Description:                      It is used to initialize the empty constructor.
+     *Created By                        G Gagandeep Reddy
+     *Created Date                      24-MARCH-2021  
+	*************************************************************************************/
 	public Car() {
 		super();
 	}
 
+	/************************************************************************************
+	 * Method:                          Car
+     *Description:                      It is used to initialize the parameterized constructor.
+     *Created By                        G Gagandeep Reddy
+     *Created Date                      24-MARCH-2021  
+	*************************************************************************************/
 	public Car(long carId, String brand, String model, String variant, LocalDate registrationYear,
 			String registrationState) {
 		super();
