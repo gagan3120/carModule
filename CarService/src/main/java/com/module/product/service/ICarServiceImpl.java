@@ -62,7 +62,7 @@ public class ICarServiceImpl implements ICarService {
 		if (carList.isPresent()) {
 			this.ICarRepository.delete(carList.get());
 		} else {
-			throw new ResourceNotFoundException("Record not found with ID :" + id);
+			throw new ResourceNotFoundException("Car not found with ID :" + id);
 		}
 	}
 
@@ -77,8 +77,9 @@ public class ICarServiceImpl implements ICarService {
 	 ***********************************************************************************/
 	@Override
 	public Car updateCar(Car car, long id) {
-		Optional<Car> carList = this.ICarRepository.findById(id);
+		
 		try {
+			Optional<Car> carList = this.ICarRepository.findById(id);
 			if (carList.isPresent()) {
 				Car carUpdate = carList.get();
 				carUpdate.setBrand(car.getBrand());
@@ -90,10 +91,10 @@ public class ICarServiceImpl implements ICarService {
 				ICarRepository.save(carUpdate);
 				return carUpdate;
 			} else {
-				throw new ResourceNotFoundException("Record not found with ID :" + id);
+				throw new ResourceNotFoundException("Car not found with ID :" + id);
 			}
 		} catch (Exception e) {
-			throw new ModelUpdateException("couldnt update the appointment details,please try again ");
+			throw new ModelUpdateException("Couldn't update the car details, please try again ");
 		}
 
 	}
@@ -114,10 +115,10 @@ public class ICarServiceImpl implements ICarService {
 			if (carList.isPresent()) {
 				return carList.get();
 			} else {
-				throw new ResourceNotFoundException("Record not found with ID :" + id);
+				throw new ResourceNotFoundException("Car not found with ID :" + id);
 			}
 		} catch (Exception e) {
-			throw new ModelNotFoundException("Couldnt find the appointment by id" + id);
+			throw new ModelNotFoundException("Couldn't find the car by id" + id);
 		}
 	}
 
@@ -136,7 +137,7 @@ public class ICarServiceImpl implements ICarService {
 			return (List<Car>) ICarRepository.findAll();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			throw new ModelEmptyListException("error retriving appointments...please try again");
+			throw new ModelEmptyListException("Error retriving cars...please try again");
 		}
 	}
 
@@ -155,7 +156,7 @@ public class ICarServiceImpl implements ICarService {
 			return (List<Car>) ICarRepository.findByModel(model);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			throw new ModelEmptyListException("error retriving appointments...please try again");
+			throw new ModelEmptyListException("Error retriving cars...please try again");
 		}
 	}
 
@@ -174,7 +175,7 @@ public class ICarServiceImpl implements ICarService {
 			return (List<Car>) ICarRepository.findByBrand(brand);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			throw new ModelEmptyListException("error retriving appointments...please try again");
+			throw new ModelEmptyListException("Error retriving cars...please try again");
 		}
 	}
 
